@@ -17,6 +17,7 @@ function trackConversion(eventName, eventParams = {}) {
 
 document.querySelectorAll("[data-track]").forEach((element) => {
   element.addEventListener("click", () => {
+    
     trackConversion(element.dataset.track, {
       page_path: window.location.pathname,
       link_url: element.href || ""
